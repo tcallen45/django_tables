@@ -1,0 +1,11 @@
+{% if matches %}
+<ul>
+    {% for match in matches %}
+        <p>
+            {{match.home_team}} {{match.home_score}} v. {{match.away_score}} {{match.away_team}} - {{match.result}}: {{match.match_number}} {{match.status}}
+        </p>
+    {% endfor %}
+</ul>
+{% else %}
+    <p>There are no live matches</p>
+{% endif %}
